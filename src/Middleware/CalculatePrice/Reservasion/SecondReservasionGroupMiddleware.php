@@ -51,13 +51,13 @@ class SecondReservasionGroupMiddleware extends AbstractCalculatePriceReservasion
         }
 
         if ($paymentMonth <= 4 && $currentYear === $paymentYear) {
-            $this->discountKey = self::FIRST;
+            $this->discountKey = self::SECOND;
 
             return;
         }
 
         if ($paymentMonth <= 5 && $currentYear === $paymentYear) {
-            $this->discountKey = self::FIRST;
+            $this->discountKey = self::THIRTY;
         }
     }
 }
